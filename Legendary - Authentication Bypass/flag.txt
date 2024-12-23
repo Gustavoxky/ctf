@@ -1,0 +1,1 @@
+FLAG{legendary_authentication_bypass}

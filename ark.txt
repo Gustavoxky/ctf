@@ -1,0 +1,17 @@
+ctf/
+├── easy/
+│   ├── Dockerfile
+│   ├── app/
+│   │   └── vulnerable_app_easy.py
+│   └── flag.txt
+├── medium/
+│   ├── Dockerfile
+│   ├── app/
+│   │   └── vulnerable_app_medium.py
+│   └── flag.txt
+├── advanced/
+│   ├── Dockerfile
+│   ├── app/
+│   │   └── vulnerable_app_advanced.py
+│   └── flag.txt
+└── docker-compose.yml
