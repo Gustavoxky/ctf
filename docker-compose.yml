@@ -31,26 +31,41 @@ services:
       - "8086:80"
 
   intermediate:
-    build: ./intermediate
+    build: ./Intermediate - File Upload Vulnerability
     ports:
       - "8087:80"
 
   expert:
-    build: ./expert
+    build: ./Expert - SSRF
     ports:
       - "8088:80"
 
   elite:
-    build: ./elite
+    build: ./Elite - RCE
     ports:
       - "8089:80"
 
   legendary:
-    build: ./legendary
+    build: ./Legendary - Authentication Bypass
     ports:
       - "8090:80"
 
   mythical:
-    build: ./mythical
+    build: ./Mythical - Race Condition
     ports:
       - "8091:80"
+
+  impossible:
+    build: ./Impossible - XXE
+    ports:
+      - "8092:80"
+
+  insane:
+    build: ./Insane - Escapada de Restrição
+    ports:
+      - "8093:80"
+
+  godmode:
+    build: ./GodMode - JWT Manipulation
+    ports:
+      - "8094:80"

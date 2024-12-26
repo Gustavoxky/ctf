@@ -1,0 +1,1 @@
+FLAG{restricted_command_bypass}
