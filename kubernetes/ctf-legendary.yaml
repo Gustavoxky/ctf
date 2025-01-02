@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ctf-legendary
+  labels:
+    app: ctf-legendary
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ctf-legendary
+  template:
+    metadata:
+      labels:
+        app: ctf-legendary
+    spec:
+      containers:
+        - name: ctf-legendary
+          image: ctf-legendary:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ctf-legendary
+spec:
+  selector:
+    app: ctf-legendary
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort

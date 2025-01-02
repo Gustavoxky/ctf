@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ctf-xss
+  labels:
+    app: ctf-xss
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ctf-xss
+  template:
+    metadata:
+      labels:
+        app: ctf-xss
+    spec:
+      containers:
+        - name: ctf-xss
+          image: ctf-xss:latest
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ctf-xss
+spec:
+  selector:
+    app: ctf-xss
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: NodePort
