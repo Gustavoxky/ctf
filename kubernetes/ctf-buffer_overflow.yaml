@@ -1,32 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ctf-buffer_overflow
+  name: ctf-buffer-overflow
   labels:
-    app: ctf-buffer_overflow
+    app: ctf-buffer-overflow
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ctf-buffer_overflow
+      app: ctf-buffer-overflow
   template:
     metadata:
       labels:
-        app: ctf-buffer_overflow
+        app: ctf-buffer-overflow
     spec:
       containers:
-        - name: ctf-buffer_overflow
-          image: ctf-buffer_overflow:latest
+        - name: ctf-buffer-overflow
+          image: ctf-buffer-overflow:latest
           ports:
             - containerPort: 80
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: ctf-buffer_overflow
+  name: ctf-buffer-overflow
 spec:
   selector:
-    app: ctf-buffer_overflow
+    app: ctf-buffer-overflow
   ports:
     - protocol: TCP
       port: 80
